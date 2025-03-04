@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casdy Photobooth</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Casdy Photobooth</h1>
+        <p>Photobooth online dari web </p>
+
+        <div class="camera-container">
+            <video id="video" autoplay></video>
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="controls">
+            <label for="effect">Effect:</label>
+            <select id="effect">
+                <option value="none">No Effect</option>
+                <option value="grayscale">Grayscale</option>
+                <option value="sepia">Sepia</option>
+            </select>
+
+            <label for="frame">Frame Overlay:</label>
+            <select id="frame">
+                <option value="none">No Frame</option>
+                <option value="border">Border Color</option>
+                <option value="collage">Collage</option>
+            </select>
+
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor">
+        </div>
+
+        <button id="capture">📷 Take Photos</button>
+        <button id="save" style="display:none;">💾 Save</button>
+        <button id="retry" style="display:none;">🔄 Retry</button>
+
+        <img id="photo" src="" alt="Captured Photo">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
